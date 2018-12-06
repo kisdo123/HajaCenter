@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+#bennerimage {
+	z-index: 2;
+	opacity: 0.5;
+}
+
+#bennercolor {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 300px;
+	width: 100%;
+	top: 179px;
+	z-index: 1;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bolder;
+	color: white;
+	line-height: 300px;
+}
+
+#containerbody {
+	text-align: center;
+}
+
+#divwrite{
+	margin-bottom: 30px;
+	margin-right: 13%;
+	text-align: right;
+}
+
+
+table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	background-color: transparent;
+	border-collapse: collapse;
+	font-size: 16px;
+	border: 5px solid #dddddd;
+}
+
+thead {
+	background-color: #eeeeee;
+	font-size: 22px;
+}
+
+th {
+	text-align: center;
+}
+
+tr, td {
+	padding: 8px;
+	line-height: 1.5;
+	vertical-align: center;
+	border-collapse: collapse;
+	border: 3px solid #ddd;
+	height: 70px;
+}
+
+
+
+
+input[type="text"] {
+	width: 97%;
+	height: 95%;
+	border: none;
+}
+
+input[type="text"]:focus{
+	outline: none;
+	border: 3px solid #ddd;
+} 
+
+
+textarea {
+	width: 97%;
+	height: 750px;
+	resize: none;
+	border: none;
+}
+
+
+textarea:focus{
+	outline: none;
+	border: 3px solid #ddd;
+}
+
+
+#divbtn {
+	margin-bottom: 30px;
+	margin-right: 15%;
+	text-align: right;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	margin-left: 75%;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 2;
+	text-align: right;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #717b71;
+	border: 1px solid #717b71;
+	border-radius: 4px;
+	color: white;
+	white-space: nowrap;
+	font-size: 15px
+}
+
+.btnwrite:hover {
+	color: white;
+	background-color: #2b2926;
+	border-color: #2b2926;
+}

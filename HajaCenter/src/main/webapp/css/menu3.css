@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+#bennerimage {
+	z-index: 2;
+	opacity: 0.5;
+}
+
+#bennercolor {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 300px;
+	width: 100%;
+	top: 179px;
+	z-index: 1;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bolder;
+	color: white;
+	line-height: 300px;
+}
+
+#containerbody {
+	text-align: center;
+}
+
+/* 테이블 CSS */
+#divtable {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#articletable {
+	width: 100%;
+	max-width: 75%;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	border-collapse: collapse;
+	background-color: transparent;
+}
+
+#articletable thead {
+	background-color: #eeeeee;
+}
+
+#articletable th {
+	text-align: center;
+}
+
+#articletable>thead>tr>th, #articletable>tbody>tr>th, #articletable>thead>tr>td,
+	#articletable>tbody>tr>td {
+	padding: 8px;
+	line-height: 1.5;
+	vertical-align: center;
+	border-top: 5px solid #ddd;
+	height: 70px;
+}
+
+#divbtn {
+	margin-bottom: 30px;
+	margin-right: 15%;
+	text-align: right;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #717b71;
+	border: 1px solid #717b71;
+	border-radius: 4px;
+	color: white;
+}
+
+.btnwrite:hover {
+	color: white;
+	background-color: #2b2926;
+	border-color: #2b2926;
+}
