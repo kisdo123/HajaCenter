@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <jsp:include page="/part/header.jsp"></jsp:include>
-<link rel="stylesheet" type="text/css" href="css/menu3.css">
+<link rel="stylesheet" type="text/css" href="/HajaCenter/css/menu3.css">
 </head>
 <jsp:include page="/part/topMenu.jsp"></jsp:include>
 <div id="container">

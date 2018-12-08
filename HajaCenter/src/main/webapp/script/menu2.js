@@ -1,11 +1,14 @@
 //Calendar 객체 생성하기
 var Calendar = new Date();
 var SubCalendar = new Date();
+var ReCalendar = new Date();
 
 var year = Calendar.getFullYear(); // 년도
 var month = Calendar.getMonth(); // 월 0~11
 var today = Calendar.getDate(); // 일
 var weekday = Calendar.getDay(); // 요일 0~6
+var re_month = ReCalendar.getMonth();
+var re_year = ReCalendar.getFullYear();
 
 function makeCalendar() {
 
@@ -13,9 +16,13 @@ function makeCalendar() {
 	// 일요일은 0 월요일은 1
 	var day_of_week = [ "일", "월", "화", "수", "목", "금", "토" ];
 
+
 	Calendar.setDate(1); // 달력은 1일부터 표시!
-	SubCalendar.setMonth(10);
-	SubCalendar.setFullYear(2018);
+	SubCalendar.setMonth(re_month);
+	SubCalendar.setFullYear(re_year);
+	
+	console.log(re_month);
+	console.log(re_year);
 
 	var DAYS_OF_WEEK = 7; // 일주일은 7일
 
@@ -98,12 +105,12 @@ function makeCalendar() {
 					+ "<span id='sp5'><input type='radio' name='roomselect' value='"
 					+ datevalue + "' class='room5'>허브홀</span>";
 
-			/*
-			 * console.log("day" + day); console.log("today" + today);
-			 * console.log("day_month" + day_month); console.log("month" +
-			 * month); console.log("day_year" + day_year); console.log("year" +
-			 * year);
-			 */
+		/*	console.log("day" + day);
+			console.log("today" + today);
+			console.log("day_month" + day_month);
+			console.log("month" + month);
+			console.log("day_year" + day_year);
+			console.log("year" + year);*/
 
 			// 일요일이면 tr로 한칸 내린다
 			if (week_day == 0) {
@@ -119,6 +126,7 @@ function makeCalendar() {
 			} else if (year == day_year && day_month > month) {
 				str += TD_pass_start + TD_end;
 
+				
 				// 해당하는 달에서 지나간 년도를 막음
 			} else if (day_year > year) {
 				str += TD_pass_start + TD_end;

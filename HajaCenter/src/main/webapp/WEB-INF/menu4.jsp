@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <jsp:include page="/part/header.jsp"></jsp:include>
-<link rel="stylesheet" type="text/css" href="css/menu4.css">
+<link rel="stylesheet" type="text/css" href="/HajaCenter/css/menu4.css">
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=96b8706698bbb616b540588b939a86bc&libraries=services"></script>
 </head>
 <jsp:include page="/part/topMenu.jsp"></jsp:include>

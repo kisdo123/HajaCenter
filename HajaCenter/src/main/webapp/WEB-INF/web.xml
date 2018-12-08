@@ -14,12 +14,12 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:/config/beans.xml</param-value>
 	</context-param>
-	
+
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -28,14 +28,23 @@
 			<param-value>UTF-8</param-value>
 		</init-param>
 	</filter>
+
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>*.do</url-pattern>
 	</filter-mapping>
-	
+
 	<servlet-mapping>
 		<servlet-name>springDispatcherServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 
+	<filter>
+		<filter-name>Login</filter-name>
+		<filter-class>Filter.Login</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Login</filter-name>
+		<url-pattern>/main.do</url-pattern>
+	</filter-mapping>
 </web-app>

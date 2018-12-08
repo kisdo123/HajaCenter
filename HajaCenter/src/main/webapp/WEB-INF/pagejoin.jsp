@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/pagejoin.css">
-<script type="text/javascript" src="script/pagejoin.js"></script>
+<link rel="stylesheet" href="/HajaCenter/css/bootstrap.min.css">
+<link rel="stylesheet" href="/HajaCenter/css/pagejoin.css">
+<script type="text/javascript" src="/HajaCenter/script/pagejoin.js"></script>
 </head>
 <body class="text-center" oncontextmenu="return false" ondragstart="return false" onselect="return false">
-	<form action="join" method="post" class="form-signin" onsubmit="return check()">
+	<form action="join.do" method="post" class="form-signin" onsubmit="return check()">
 		<br>
 		<img id="logo" src="image/logoeng.PNG">
 		<div class="joindiv">
@@ -45,7 +45,7 @@
 		<input type="date" id="date" class="form-control" name="birth" value="${param.birth }" placeholder="생년월일 ex) 020228" pattern="[0-9]{2}[0-1]{1}[0-9]{1}[0-3]{1}[0-9]{1}" required>
 		<br>
 		<input class="btn btn-lg btn-primary btn-block" type="submit" value="회원가입">
-		<a href="login" style="color: black;">가입취소</a>
+		<a href="/HajaCenter/loginForm.do" style="color: black;">가입취소</a>
 	</form>
 </body>
 </html>
