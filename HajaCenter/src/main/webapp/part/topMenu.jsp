@@ -3,7 +3,7 @@
 	<div id="topmenubody">
 		<div id="divlogin">
 			<div style="margin-right: 100px; padding-top: 15px;">
-				<a href="pagemy.jsp"><i class="fa fa-user-circle"></i>&nbsp;마이페이지</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="logout.do"><i class="fa fa-user-times" aria-hidden="true"></i>&nbsp;로그아웃</a>
+				<a href="pagemyForm.do"><i class="fa fa-user-circle"></i>&nbsp;마이페이지</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="logout.do"><i class="fa fa-user-times" aria-hidden="true"></i>&nbsp;로그아웃</a>
 			</div>
 		</div>
 		<nav id="navMenu">

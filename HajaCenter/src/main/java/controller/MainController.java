@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import User.DTO.User;
 import User.service.UserService;
-import exception.UserException;
 
 @Controller
 public class MainController {
@@ -41,7 +40,7 @@ public class MainController {
 	@RequestMapping("/join.do")
 	public String joinUser(@ModelAttribute User user) {
 		userService.joinUser(user);
-		return "success/joinSuccess";
+		return "success/success";
 	}
 
 	// 회원가입 폼을 요청
@@ -56,8 +55,8 @@ public class MainController {
 		try {
 			User user = userService.login(id, pw);
 			request.getSession().setAttribute("User", user);
-		} catch (RuntimeException e) {
-			throw new UserException("로그인 실패");
+		} catch (Exception e) {
+			return "fail/fail";
 		}
 		return "main";
 	}
@@ -76,27 +75,41 @@ public class MainController {
 	}
 
 	// 마이페이지 폼요청
-	@RequestMapping("/modifyForm.do")
+	@RequestMapping("/pagemyForm.do")
 	public String updateForm(HttpServletRequest request, Model model) {
+		// 세선에서 User 객체에서 userId를 가져옴
 		User loginUser = (User) request.getSession().getAttribute("User");
 		int userId = loginUser.getUserId();
+
+		// userId로 select 실행
 		User user = userService.updateInput(userId);
+
+		// phone 하이픈 제거후 저장
+		String getphone = user.getPhone();
+		String phone = getphone.replaceAll("-", "");
+		user.setPhone(phone);
+
 		model.addAttribute("user", user);
-		return "pagemodify";
+		return "pagemy";
 	}
 
 	// 회원정보 수정
 	@RequestMapping("/modify.do")
 	public String Update(HttpServletRequest request, @ModelAttribute User user) {
+		// 세선으로부터 userId와 id 이름을 가져와 셋팅 나머지는 입력받음
 		User loginUser = (User) request.getSession().getAttribute("User");
 		int userId = loginUser.getUserId();
+		String id = loginUser.getId();
+		String name = loginUser.getName();
 		user.setUserId(userId);
-		try {
+		user.setId(id);
+		user.setName(name);
+		try{
 			userService.update(user);
-		} catch (UserException e) {
-			e.printStackTrace();
+		}catch (Exception e) {
+			return "fail/fail";
 		}
-		return "success/joinSuccess";
+		return "success/success";
 	}
 
 }

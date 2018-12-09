@@ -21,7 +21,7 @@
 	
 	<!-- 회원변경 -->
 	<update id="updateUser" parameterType="User">
-		update user set pw=#{pw}, phone=#{phone}, team=#{team} where userNo=#{userNo};
+		update user set pw=#{pw}, phone=#{phone}, team=#{team} where userId=#{userId};
 	</update>
 	
 </mapper>

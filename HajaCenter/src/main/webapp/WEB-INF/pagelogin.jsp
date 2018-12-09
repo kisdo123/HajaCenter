@@ -9,6 +9,7 @@
 <meta name="author" content="">
 <link rel="stylesheet" href="/HajaCenter/css/bootstrap.min.css">
 <link rel="stylesheet" href="/HajaCenter/css/pagelogin.css">
+<<script type="text/javascript" src="/HajaCenter/script/pagelogin.js"></script>
 </head>
 <body class="text-center" oncontextmenu="return false" ondragstart="return false" onselect="return false">
 	<form action="login.do" method="post" class="form-signin">
