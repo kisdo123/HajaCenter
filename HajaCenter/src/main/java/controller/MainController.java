@@ -54,7 +54,7 @@ public class MainController {
 	@RequestMapping("/login.do")
 	public String login(HttpServletRequest request, @RequestParam("id") String id, @RequestParam("pw") String pw) {
 		try {
-			User user = userService.Login(id, pw);
+			User user = userService.login(id, pw);
 			request.getSession().setAttribute("User", user);
 		} catch (RuntimeException e) {
 			throw new UserException("로그인 실패");
@@ -73,6 +73,30 @@ public class MainController {
 	public String logout(HttpServletRequest request) {
 		request.getSession().setAttribute("User", null);
 		return "redirect:/loginForm.do";
+	}
+
+	// 마이페이지 폼요청
+	@RequestMapping("/modifyForm.do")
+	public String updateForm(HttpServletRequest request, Model model) {
+		User loginUser = (User) request.getSession().getAttribute("User");
+		int userId = loginUser.getUserId();
+		User user = userService.updateInput(userId);
+		model.addAttribute("user", user);
+		return "pagemodify";
+	}
+
+	// 회원정보 수정
+	@RequestMapping("/modify.do")
+	public String Update(HttpServletRequest request, @ModelAttribute User user) {
+		User loginUser = (User) request.getSession().getAttribute("User");
+		int userId = loginUser.getUserId();
+		user.setUserId(userId);
+		try {
+			userService.update(user);
+		} catch (UserException e) {
+			e.printStackTrace();
+		}
+		return "success/joinSuccess";
 	}
 
 }

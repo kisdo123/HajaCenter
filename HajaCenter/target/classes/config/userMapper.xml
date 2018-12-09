@@ -9,10 +9,20 @@
 		INSERT INTO user(name, id, pw, phone, team, birth) VALUES(#{name},#{id},#{pw},#{phone},#{team},#{birth});
 	</insert>
 	
-	<!-- userId로 회원조회 -->
+	<!-- Id로 회원조회 -->
 	<select id="selectUserById" resultType="User" parameterType="string">
 		select * from user where id = #{id}
 	</select>
+	
+	<!-- 회원번호 로 회원조회 -->
+	<select id="selectUserByUserId" resultType="User" parameterType="int">
+		select * from user where userId = #{userId}
+	</select>
+	
+	<!-- 회원변경 -->
+	<update id="updateUser" parameterType="User">
+		update user set pw=#{pw}, phone=#{phone}, team=#{team} where userNo=#{userNo};
+	</update>
 	
 </mapper>
 

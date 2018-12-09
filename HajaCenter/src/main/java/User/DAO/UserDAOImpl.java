@@ -1,7 +1,5 @@
 package User.DAO;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -23,6 +21,17 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public User selectUserById(String id) {
 		return userMapper.selectUserById(id);
+	}
+
+	//회원번호로 user조회
+	@Override
+	public User selectUserByUserId(int userId) {
+		return userMapper.selectUserByUserId(userId);
+	}
+
+	@Override
+	public int updateUser(User user) {
+		return userMapper.updateUser(user);
 	}
 
 }
