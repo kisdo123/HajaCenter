@@ -18,7 +18,7 @@
 					<a href="menu2.jsp" class="sm-link sm-link_bg sm-link9"><span class="sm-link__label"><b>대&nbsp;관&nbsp;하&nbsp;기</b></span></a>
 				</li>
 				<li>
-					<a href="menu3.jsp" class="sm-link sm-link_bg sm-link9"><span class="sm-link__label"><b>Q&nbsp;&nbsp;&amp;&nbsp;&nbsp;A</b></span></a>
+					<a href="menu3.do" class="sm-link sm-link_bg sm-link9"><span class="sm-link__label"><b>Q&nbsp;&nbsp;&amp;&nbsp;&nbsp;A</b></span></a>
 				</li>
 				<li>
 					<a href="menu4.do" class="sm-link sm-link_bg sm-link9"><span class="sm-link__label"><b>찾아오시는길</b></span></a>

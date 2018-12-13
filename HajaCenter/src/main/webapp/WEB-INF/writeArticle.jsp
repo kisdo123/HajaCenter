@@ -9,7 +9,7 @@
 	</div>
 	<div id="bennercolor">Q &amp; A</div>
 	<div id="containerbody">
-		<form action="menu3.jsp" method="post">
+		<form action="writeArticle.do" method="post">
 			<table>
 				<thead>
 					<tr>
@@ -18,22 +18,17 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>
-							<input type="text" placeholder="글 제목" name="articleTitle" maxlength="50" required autofocus>
-						</td>
+						<td><input type="text" placeholder="글 제목" name="title" maxlength="50" required autofocus></td>
 					</tr>
 					<tr>
-						<td>
-							<textarea placeholder="글 내용" name="articleContent"></textarea>
-						</td>
+						<td><textarea placeholder="글 내용" name="content"></textarea></td>
 					</tr>
 				</tbody>
 			</table>
 			<div id="divwrite">
-				<button class="btn btnwrite">작성 완료</button>
+				<input type="submit" class="btn btnwrite" value="작성 완료">
 			</div>
 		</form>
 	</div>
 </div>
-<input type="text" placeholder="안녕">
 <jsp:include page="/part/footer.jsp"></jsp:include>

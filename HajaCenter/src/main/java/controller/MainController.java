@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import Article.DTO.Article;
+import Article.service.ArticleService;
 import User.DTO.User;
 import User.service.UserService;
 
@@ -17,6 +21,9 @@ public class MainController {
 
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private ArticleService articleService;
 
 	// 메인화면으로 보냄
 	@RequestMapping("/main.do")
@@ -104,12 +111,39 @@ public class MainController {
 		user.setUserId(userId);
 		user.setId(id);
 		user.setName(name);
-		try{
+		try {
 			userService.update(user);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			return "fail/fail";
 		}
 		return "success/success";
 	}
 
+	// 글쓰기 진행
+	@RequestMapping("/writeArticle.do")
+	public String writeArticle(HttpServletRequest request, @ModelAttribute Article article) {
+		User user = (User) request.getSession().getAttribute("User");
+		int userId = user.getUserId();
+		article.setUserId(userId);
+		try {
+			articleService.write(article);
+			return "success/success";
+		} catch (Exception e) {
+			return "fail/fail";
+		}
+	}
+
+	// 글쓰기 폼을 요청
+	@RequestMapping("/writeArticleForm.do")
+	public String writeArticleForm(Model model) {
+		return "writeArticle";
+	}
+
+	// 전체 목록보기
+	@RequestMapping("/menu3.do")
+	public String ProductList(Model model) {
+		List<Article> articles = articleService.viewlist();
+		model.addAttribute("articles", articles);
+		return "menu3";
+	}
 }
