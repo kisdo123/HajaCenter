@@ -15,4 +15,6 @@ public interface ArticleDAO {
 	public int updateArticle(Article article);
 	//글삭제
 	public int deleteArticle(Article article);
+	//10개보기
+	public List<Article> viewlistlimit10();
 }

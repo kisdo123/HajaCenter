@@ -12,6 +12,10 @@
 	<select id="viewlist" resultType="Article">
 		select * from article,user where article.userId = user.userId order by wdate desc;
 	</select>
+	<!-- 최신글 10개보기 -->
+	<select id="viewlistlimit10" resultType="Article">
+		select * from article,user where article.userId = user.userId order by wdate desc limit 10;
+	</select>
 	<!-- 내용보기 -->
 	<select id="viewcontent" resultType="Article" parameterType="int">
 		select * from article where articleId = #{aritlceId};

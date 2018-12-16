@@ -38,4 +38,9 @@ public class ArticleDAOImpl implements ArticleDAO {
 		return articleMapper.deleteArticle(article);
 	}
 
+	@Override
+	public List<Article> viewlistlimit10() {
+		return articleMapper.viewlistlimit10();
+	}
+
 }

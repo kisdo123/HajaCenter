@@ -19,4 +19,7 @@ public interface ArticleService {
 
 	// 글삭제
 	public void deleteArticle(Article article);
+
+	// 10개 목록보기
+	public List<Article> viewlistlimit10();
 }

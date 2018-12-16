@@ -30,6 +30,12 @@ public class ArticleServiceImpl implements ArticleService{
 		List<Article> articles = articleDAO.viewlist();
 		return articles;
 	}
+	
+	@Override
+	public List<Article> viewlistlimit10() {
+		List<Article> articles = articleDAO.viewlistlimit10();
+		return articles;
+	}
 
 	//내용보기
 	@Override

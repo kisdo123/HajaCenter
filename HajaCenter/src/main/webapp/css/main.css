@@ -35,7 +35,7 @@
 	display: inline-block;
 	width: 50px;
 	top: 0%;
-	height:500px;
+	height: 500px;
 	text-decoration: none;
 	text-align: center;
 	line-height: 500px;
@@ -53,16 +53,49 @@
 	cursor: pointer;
 }
 
-.contents{
+.contents {
 	display: flex;
 	text-align: center;
 }
 
-.contents>div{
+.contents>div {
 	display: inline-block;
 	width: 50%;
 }
 
-.divboard{
-	border-right: 5px solid #757575;
+#divtable {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#articletable {
+	width: 90%;
+	display: inline-table;
+	border-collapse: collapse;
+	background-color: transparent;
+	height: 500px;
+}
+
+#articletable thead {
+	background-color: #eeeeee;
+}
+
+#articletable th {
+	text-align: center;
+}
+
+#articletable>thead>tr>th, #articletable>tbody>tr>th, #articletable>thead>tr>td,
+	#articletable>tbody>tr>td {
+	padding: 8px;
+	line-height: 1.5;
+	vertical-align: center;
+	border-top: 5px solid #ddd;
+}
+
+.divvideo {
+	border-left: 2px solid #757575;
+}
+
+.divboard {
+	border-right: 2px solid #757575;
 }
