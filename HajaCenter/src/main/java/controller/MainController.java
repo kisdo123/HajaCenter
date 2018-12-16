@@ -28,6 +28,7 @@ public class MainController {
 	// 메인화면으로 보냄
 	@RequestMapping("/main.do")
 	public String main(Model model) {
+		System.out.println("진입");
 		List<Article> articles = articleService.viewlistlimit10();
 		model.addAttribute("articles", articles);
 		return "main";
@@ -67,7 +68,7 @@ public class MainController {
 		} catch (Exception e) {
 			return "fail/fail";
 		}
-		return "main";
+		return "redirect:/main.do";
 	}
 
 	// 로그인 폼을 요청
