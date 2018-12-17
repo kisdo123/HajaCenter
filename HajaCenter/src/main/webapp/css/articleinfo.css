@@ -1,0 +1,96 @@
+#bennerimage {
+	z-index: 2;
+	opacity: 0.5;
+}
+
+#bennercolor {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 300px;
+	width: 100%;
+	top: 179px;
+	z-index: 1;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bolder;
+	color: white;
+	line-height: 300px;
+}
+
+#containerbody {
+	text-align: center;
+}
+
+table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	background-color: transparent;
+	border-collapse: collapse;
+	font-size: 16px;
+	border: 5px solid #dddddd;
+}
+
+td {
+	text-align: left;
+	padding: 1%;
+	font-size: 20px;
+}
+
+#trboderdashed {
+	border-top: 5px dashed #dddddd;
+}
+
+#tdwdate {
+	text-align: right;
+	font-size: 3px;
+	color: #ccc;
+}
+
+#textcontentarea {
+	padding-top: 3%;
+	padding-left: 2%;
+}
+
+#divminheight {
+	min-height: 300px;
+}
+
+#divwrite {
+	margin-bottom: 30px;
+	text-align: right;
+	display: inline-block;
+	width: 80%;
+}
+
+.tidatetop {
+	padding-top: 2%;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 2;
+	text-align: right;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #717b71;
+	border: 1px solid #717b71;
+	border-radius: 4px;
+	color: white;
+	white-space: nowrap;
+	font-size: 15px
+}
+
+.btnwrite:hover {
+	color: white;
+	background-color: #2b2926;
+	border-color: #2b2926;
+}

@@ -24,7 +24,7 @@
 				<c:forEach var="article" items="${articles }">
 					<tr>
 						<td>${article.articleId }</td>
-						<td>${article.title }</td>
+						<td><a href="articleinfo.do?articleId=${article.articleId }"> ${article.title }</a></td>
 						<td>${article.name}</td>
 						<td>${article.wdate}</td>
 					</tr>

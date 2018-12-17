@@ -28,7 +28,6 @@ public class MainController {
 	// 메인화면으로 보냄
 	@RequestMapping("/main.do")
 	public String main(Model model) {
-		System.out.println("진입");
 		List<Article> articles = articleService.viewlistlimit10();
 		model.addAttribute("articles", articles);
 		return "main";
@@ -149,5 +148,12 @@ public class MainController {
 		model.addAttribute("articles", articles);
 		return "menu3";
 	}
-		
+
+	// 내용보기
+	@RequestMapping("/articleinfo.do")
+	public String viewcontent(Model model, @RequestParam int articleId) {
+		Article article = articleService.viewcontent(articleId);
+		model.addAttribute("article", article);
+		return "articleinfo";
+	}
 }
