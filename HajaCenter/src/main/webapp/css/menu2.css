@@ -112,7 +112,7 @@ td {
     line-height: 1.5;
     text-align: left;
     border: 5px solid #ddd;
-    height: 70px;
+    height: 152px;
 }
 
 
@@ -134,8 +134,15 @@ td {
 
 .pass{
 	background-color: #757575;
+	vertical-align: top;
+
 }
 
+
+.daypass{
+	color : #21222a;
+	font-weight: bolder;
+}
 
 .day{
 	font-weight:bolder;
@@ -187,9 +194,6 @@ td {
 
 
 
-
-
-
 .btncalendar:hover{
 	color: white;
 	background-color: #2b2926;
@@ -198,21 +202,3 @@ td {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}

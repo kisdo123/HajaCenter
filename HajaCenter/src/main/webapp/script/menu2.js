@@ -45,12 +45,16 @@ function makeCalendar() {
 	var TD_day_start = "<td>"; // 평일
 	var TD_saturday_start = "<td>";
 	var TD_sunday_start = "<td>";
+
 	var TD_end = "</td>";
 
 	var DIV_today_start = "<div class='sptoday'>";
 	var DIV_day_start = "<div class='day'>";
+	var DIV_pass_start = "<div class='daypass'>";
 	var DIV_saturday_start = "<div class='saturday'>";
 	var DIV_sunday_start = "<div class='sunday'>";
+	
+	
 	var DIV_end = "</div>";
 
 	var str = "";
@@ -119,17 +123,18 @@ function makeCalendar() {
 
 			// 해당하는 달에서 지나간 날짜를 막음
 			if (day < today && day_month == month && day_year == year) {
+				
+				str += TD_pass_start + DIV_pass_start + day + DIV_end + TD_end;
 
-				str += TD_pass_start + TD_end;
 
 				// 해당하는 달에서 지나간 달을 막음
 			} else if (year == day_year && day_month > month) {
-				str += TD_pass_start + TD_end;
+				str += TD_pass_start + DIV_pass_start + day + DIV_end + TD_end;
 
 				
 				// 해당하는 달에서 지나간 년도를 막음
 			} else if (day_year > year) {
-				str += TD_pass_start + TD_end;
+				str += TD_pass_start + DIV_pass_start + day + DIV_end + TD_end;
 
 			}
 
